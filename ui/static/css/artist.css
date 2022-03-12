@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(187, 221, 187);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.wrapper {
+    position: relative;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    display: block;
+    flex-wrap: wrap;    
+    justify-content: center;
+}
+
+.card-img {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.image {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 450px;
+    height: auto;
+}
+
+.member {
+    text-align: center;
+    color: rgb(121, 83, 14);
+}
+
+.memberName {
+    text-align: center;
+    color: rgb(136, 72, 72);
+}
+
+.dates {
+    text-align: center;
+    color: rgb(136, 72, 72);
+}
+
+.location {
+    text-align: center;
+    color: rgb(230, 103, 57);
+    word-break: break-word;
+}
+
+.dateslocation {
+    text-align: center;
+    color: rgb(121, 83, 14);;
+}
+
+.name {
+    text-align: center;
+    font-size: 35px;
+    color: rgb(4, 41, 29);
+    word-break: break-word;
+}
+
+.card {
+    width: fit-content; /* Ширина слоя */
+    margin: 7px; /* Значение отступов */
+    padding: 50px; /* Поля вокруг текста */
+    border: 4px solid black; /* Параметры границы */
+    background: rgb(255, 241, 116) /* Цвет фона */
+}

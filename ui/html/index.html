@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>General page</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="icon" type="png" href="/static/image/123.png">
+</head>
+<body>
+    <div class="searchLine" >
+        <form action="/search" method="GET" autocomplete="off" >
+            <input class="search" list="browsers" name="id" placeholder="Искать здесь..." type="search">
+            
+            
+            <datalist id="browsers" >
+                {{range .}}
+                <option value="{{.Name}}" title="artist" ><details>{{.Name}} - artist/band</details></option>
+                <option value="{{.FirstAlbum}}">{{.FirstAlbum}} - first album date</option>
+                <option value="{{.CreationDate}}">{{.CreationDate}} - creation date</option>
+                
+                {{end}}
+                {{range .}}
+                {{range .Members}}
+                <option value="{{.}}" >{{.}} - members</option>
+                {{end}}
+                {{range .Location}}
+                <option value="{{.}}">{{.}} - locations</option>
+                {{end}}
+                {{end}}
+            </datalist>
+            <select name="tags" id="">
+                <option value="all">all</option>
+                <option value="artist/band">artist/band</option>
+                <option value="first album date">first album date</option>
+                <option value="creation date">creation date</option>
+                <option value="members">members</option>
+                <option value="locations">locations</option>
+            </select>   
+            <button type="submit">Поиск</button>
+        </form>
+        
+    </div>
+   
+    <div class="wrapper">
+        {{range .}}
+        <div class="card">
+            <p class="name" >{{.Name}}</p>
+            <div class="card-img">
+                <img class="image" src="{{ .Image}}" alt="Тут должна быть картинка,но что-то пошло не так :(">
+                
+            </div>
+            <div class="card-btn">
+                <a class="buton" href="/artist/{{.ID}}">Подробнее</a>
+            </div>
+        </div>
+        {{end}}
+    </div>
+           
+       
+</body>
+</html>

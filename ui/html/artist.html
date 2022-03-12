@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Artist</title>
+    <link rel="stylesheet" href="/static/css/artist.css">
+    <link rel="icon" type="png" href="/static/image/123.png">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <h3 class="name" >{{ .Name}}</h3>
+            <div class="card-img">
+                <img class="image" src="{{ .Image}}" alt="Тут должна быть картинка,но что-то пошло не так :(" >
+            </div>
+            <p>
+                <h2 class="member" >Members:</h2>
+                {{ range .Members}}
+                    <p class="memberName" >{{ .}}</p>
+                {{end}}
+            </p>
+            <h2 class="member">Creation date:</h2>
+            <p class="memberName">{{.CreationDate}}</p>
+            <h2 class="member" >First Album:</h2>
+            <p class="memberName" >{{.FirstAlbum}}</p>
+            <div>   
+                <div>
+                    <h2 class="dateslocation" >Concert dates:</h2>
+                    {{range $key,$value := .DatesLocation}}
+                     <h3 class="location" >{{$key}}</h3>
+                      {{range $value}}
+                      <p class="dates" >{{.}}</p>
+                     {{end}}
+                     {{end}}     
+                </div>
+            </div>
+        </div>   
+
+    </div>
+    
+         
+</body>
+</html>

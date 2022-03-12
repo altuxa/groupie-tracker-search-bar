@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(187, 221, 187);
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.name {
+    text-align: center;
+    color: rgb(59, 40, 21);
+    font-size: 20px;
+}
+
+.searchLine {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.search {
+    width: 265px;
+    height: 35px;
+}
+
+.card {
+    width: 300px; /* Ширина слоя */
+    margin: 7px; /* Значение отступов */
+    padding: 10px; /* Поля вокруг текста */
+    border: 4px solid black; /* Параметры границы */
+    background: rgb(255, 241, 116); /* Цвет фона */
+    text-align: center;
+    color: rgb(42, 5, 5);
+}
+
+.card-img {
+    display: block;
+    text-align: center;
+}
+
+.buton {
+    color:rgb(151, 131, 109);
+    display: inline-block;
+    text-align: center;
+    block-size: 10px;
+    border: 8px solid rgb(42, 34, 2);
+    width: 50%;
+    height: 100%;
+    font-size: 15px;
+    background-color: rgb(42, 34, 2);
+    padding: 1px;
+    transform: translate(0,8px);
+}
+
+
+.buton:hover {
+	background-color: rgb(151, 189, 134);
+}
+
